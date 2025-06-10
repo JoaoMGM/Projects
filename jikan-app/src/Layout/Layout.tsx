@@ -3,7 +3,6 @@ import { AppBar, Toolbar, Typography, IconButton, Box } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import Sidebar from "./Sidebar"; // Import Sidebar
 import { Outlet } from "react-router-dom";
-import jinxLogo from "../Logo/Jinx.png";
 
 function Layout() {
   return (
@@ -22,7 +21,7 @@ function Layout() {
             <Box
               component="img"
               alt="Logo"
-              src={jinxLogo}
+              src="/Jinx.png"
               sx={{
                 height: 40,
                 width: 60,

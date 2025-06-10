@@ -1,16 +1,14 @@
-import { createTheme, ThemeProvider } from "@mui/material/styles";
-import SeasonalAnime from "./Components/SeasonalAnime";
+import { ThemeProvider } from "@mui/material/styles";
 import theme from "./Layout/theme";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
-import Sidebar from "./Layout/Sidebar";
 import Layout from "./Layout/Layout";
 import { GlobalStyles } from "@mui/material";
-import TopAnime from "./Components/TopAnime";
+import TopAnime from "./Pages/TopAnime";
 import AnimeDetail from "./Components/AnimeDetail";
 import CharacterDetail from "./Components/CharacterDetail";
-import AnimeList from "./Components/AnimeList";
-import SeasonYearAnimeList from "./Components/SeasonYearAnimeList";
+import AnimeList from "./Pages/AnimeList";
+import SeasonYearAnimeList from "./Pages/SeasonYearAnimeList";
 
 function App() {
   return (

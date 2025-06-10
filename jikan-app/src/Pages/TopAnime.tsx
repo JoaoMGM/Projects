@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
-import AnimeCard from "./AnimeCard";
+import { useEffect, useState } from "react";
 import { Box, Grid, Typography } from "@mui/material";
-import AnimeCardTop from "./AnimeCardTop";
+import AnimeCardTop from "../Components/AnimeCardTop";
 
 interface Anime {
   mal_id: number;

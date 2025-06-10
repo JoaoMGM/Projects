@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback } from "react";
-import AnimeCardTop from "./AnimeCardTop";
+import AnimeCardTop from "../Components/AnimeCardTop";
 import {
   Box,
   Grid,
@@ -63,6 +63,7 @@ function SeasonYearAnimeList() {
 
     const url = `https://api.jikan.moe/v4/seasons/${effectiveYear}/${effectiveSeason}?page=${page}&limit=24`;
 
+    //removing duplicated from this List
     fetch(url)
       .then((response) => response.json())
       .then((data) => {

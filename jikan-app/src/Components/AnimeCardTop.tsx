@@ -1,8 +1,6 @@
-import React from "react";
 import {
   Box,
   Card,
-  CardActionArea,
   CardContent,
   CardMedia,
   Rating,

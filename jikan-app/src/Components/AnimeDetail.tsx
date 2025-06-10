@@ -11,7 +11,6 @@ import {
   CircularProgress,
   Alert,
   Rating,
-  Accordion,
 } from "@mui/material";
 import StarIcon from "@mui/icons-material/Star";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
