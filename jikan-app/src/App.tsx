@@ -9,6 +9,7 @@ import AnimeDetail from "./Components/AnimeDetail";
 import CharacterDetail from "./Components/CharacterDetail";
 import AnimeList from "./Pages/AnimeList";
 import SeasonYearAnimeList from "./Pages/SeasonYearAnimeList";
+import VoiceActorPage from "./Components/VoiceActorDetails";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
               path="/character/:characterId"
               element={<CharacterDetail />}
             />
+            <Route path="/voice-actor/:voiceid" element={<VoiceActorPage />} />
           </Route>
         </Routes>
       </Router>

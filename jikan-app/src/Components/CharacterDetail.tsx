@@ -191,15 +191,6 @@ function CharacterDetail() {
                 </Typography>
               </Box>
             )}
-
-            {/*             {character.nicknames && character.nicknames.length > 0 && (
-              <Box sx={{ mt: 2 }}>
-                <Typography variant="subtitle2">Also known as:</Typography>
-                <Typography variant="body2">
-                  {character.nicknames.join(", ")}
-                </Typography>
-              </Box>
-            )} */}
           </Grid>
           <Grid>
             <Divider sx={{ my: 2 }} />
@@ -289,6 +280,7 @@ function CharacterDetail() {
                     {character.voices &&
                       character.voices.map((voice, index) => (
                         <Grid key={index}>
+                          // Inside your component where you map over voices
                           <Box
                             sx={{
                               display: "flex",
@@ -297,7 +289,27 @@ function CharacterDetail() {
                               textAlign: "center",
                               width: "100%",
                               maxWidth: "150px",
+                              cursor: "pointer",
+                              transition: "box-shadow 0.2s",
+                              boxShadow: 1,
+                              borderRadius: 2,
+                              "&:hover": {
+                                boxShadow: 4,
+                                backgroundColor: "#f5f5f5",
+                              },
+                              p: 2,
                             }}
+                            onClick={() =>
+                              navigate(`/voice-actor/${voice.person.mal_id}`, {
+                                state: {
+                                  actorId: voice.person.mal_id,
+                                  actorName: voice.person.name,
+                                  actorPicture:
+                                    voice.person.images.jpg.image_url,
+                                  nationality: voice.language,
+                                },
+                              })
+                            }
                           >
                             <img
                               src={voice.person.images.jpg.image_url}
